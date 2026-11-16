@@ -6,6 +6,6 @@
 
 禁止上传：数据库、.env、令牌、虚拟环境、缓存、运行时 dist/。发布工作流会从受版本管理文件构建 ZIP，排除这些内容；新增运行证据与精确提交信息只进入附件，不通过提交回写造成循环。
 
-最终 ZIP 名称：EE308_Address_Book_Submission_Final.zip。优先从 [Release](https://github.com/3028405978-hue/address-book-application/releases/tag/v1.0.0) 下载，链接公开可用与否以真实发布结果为准。源码也可用 GitHub Code → Download ZIP，后者不包含发布时新增的验证日志。
+最终 ZIP 名称：EE308_Address_Book_Submission_Final.zip。优先从 [Release](https://github.com/3028405978-hue/address-book-application/releases/tag/v1.0.0) 下载，该 Release 已正式公开，附件已实际下载并校验通过。源码也可用 GitHub Code → Download ZIP，后者不包含发布时新增的验证日志。
 
 博客、测试报告、Release 说明、验收报告和最终交付索引分别位于 docs/CSDN_BLOG.md、TEST_REPORT.md、RELEASE_NOTES.md、FINAL_ACCEPTANCE.md、FINAL_DELIVERY.md。

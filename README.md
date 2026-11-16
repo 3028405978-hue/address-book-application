@@ -97,4 +97,6 @@ render.yaml                     持久化 Render 部署配置
 
 作者身份信息、PSP 实际工时、CSDN 发布地址需要本人核实填写。项目由自动化开发助手执行实现与验证；博客为第一人称发布草稿，不能代替本人真实开发经历。
 
-GitHub 文件整理范围见 [UPLOAD_GUIDE.md](docs/UPLOAD_GUIDE.md)。GitHub 写入权限已确认，正在通过真实文档 PR 和 Actions 完成发布；未完成的 CSDN 与可选云部署另行保留状态。
+GitHub 文件整理范围见 [UPLOAD_GUIDE.md](docs/UPLOAD_GUIDE.md)。GitHub 写入权限已确认，已通过真实文档 PR 和 Actions 完成发布；未完成的 CSDN 与可选云部署另行保留状态。
+
+正式版本：[v1.0.0 Release](https://github.com/3028405978-hue/address-book-application/releases/tag/v1.0.0) · [下载完整提交 ZIP](https://github.com/3028405978-hue/address-book-application/releases/download/v1.0.0/EE308_Address_Book_Submission_Final.zip) · [已合并 PR #1](https://github.com/3028405978-hue/address-book-application/pull/1) · [四组测试与发布成功](https://github.com/3028405978-hue/address-book-application/actions/runs/43888265296)。发布附件内含精确提交 SHA、数量和新测试日志。

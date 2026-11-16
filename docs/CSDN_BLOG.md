@@ -186,13 +186,15 @@ python -m compileall .
 
 ![真实 GitHub 提交历史网页](screenshots/12-github-history.png)
 
-这张截图来自 GitHub commits/main 网页，记录本轮开始时的 7 次提交。旧的本地 git log 图仅是开发过程检查点，不作为 GitHub 网页证据。
+这张截图来自 GitHub commits/main 网页，已补拍至 PR #1 合并后的 9 次提交检查点。旧的本地 git log 图仅是开发过程检查点，不作为 GitHub 网页证据。
 
 ![真实 GitHub Actions 成功页面](screenshots/13-github-actions.png)
 
-已核实的 [GitHub Actions](https://github.com/3028405978-hue/address-book-application/actions/runs/43884952886) 在 Ubuntu/Windows、Python 3.11/3.12 四组环境中全部成功。Windows runner 是 hosted 环境，不等同 Windows 11 桌面人工测试。
+已核实的 [GitHub Actions](https://github.com/3028405978-hue/address-book-application/actions/runs/43888265296) 在 Ubuntu/Windows、Python 3.11/3.12 四组环境中全部成功。Windows runner 是 hosted 环境，不等同 Windows 11 桌面人工测试。
 
-正式 Release 目标为 [v1.0.0](https://github.com/3028405978-hue/address-book-application/releases/tag/v1.0.0)，真实 PR 从 docs/final-submission 到 main，实际状态与精确链接在最终交付索引统一更新；在 API 确认发布前不把目标地址当成已成功发布。
+正式 [v1.0.0 Release](https://github.com/3028405978-hue/address-book-application/releases/tag/v1.0.0) 已公开，包含 [完整项目 ZIP](https://github.com/3028405978-hue/address-book-application/releases/download/v1.0.0/EE308_Address_Book_Submission_Final.zip)、SHA256 和精确提交信息。真实 [PR #1](https://github.com/3028405978-hue/address-book-application/pull/1) 从 docs/final-submission 到 main，四组检查成功后已合并，合并提交为 [63dcad3](https://github.com/3028405978-hue/address-book-application/commit/63dcad3737fada52fdb5364044f7b9d9d925c769)。main [新一轮 Actions](https://github.com/3028405978-hue/address-book-application/actions/runs/43888265296) 的四组测试及发布均成功。
+
+正文最后一次核实 main 时实际为 **9 次提交**；后续发布证据补充还会增加提交，最终计数以 Release 的 FINAL_DELIVERY_RUNTIME.json 为准，不能把旧截图行数直接当最终总数。
 
 老师未提供可 Fork 的原始仓库，因此没有 Fork。项目为个人独立项目，不编造双人分工和多人审核。云部署仍为可选 PENDING，没有公网地址。
 
@@ -223,7 +225,7 @@ XP 实践主要体现在简单结构、小步提交、回归测试和集中校�
 | Compile | 待填写 | 待填写 |
 | Test | 待填写 | 待填写 |
 | Summary | 待填写 | 待填写 |
-| 合计 | 待填写 | 待填写 |
+| Total（合计） | 待填写 | 待填写 |
 
 ## 10. 总结
 
@@ -231,4 +233,10 @@ XP 实践主要体现在简单结构、小步提交、回归测试和集中校�
 
 简单结构让我更容易追踪一个操作：页面提交给路由，统一校验后更新模型，最后写入 SQLite。测试把这些约定固定下来，也让我能区分程序缺陷、测试夹具问题和演示数据问题。
 
-接下来我希望补充分页、用户认证和更清晰的数据备份流程。提交作业前，我还需要核实最终 GitHub Release 状态、核实 PSP、上传图片视频并发布 CSDN 博客。基础软件已经有实际测试证据，外部提交环节仍要以真实结果为准。
+接下来我希望补充分页、用户认证和更清晰的数据备份流程。提交作业前，GitHub PR、Release 和附件已完成，我还需要核实 PSP、上传图片视频并发布 CSDN 博客。基础软件已经有实际测试证据，剩余个人环节是填写真实工时、发布 CSDN 博客；可选云部署仍未完成。
+
+### CSDN 发布时的媒体替换
+
+正文中的 `screenshots/` 图片为仓库中的真实文件。请在 CSDN 编辑器逐张上传并保留相应图注，用返回的公开图片 URL 替换相对路径；可从仓库 docs/screenshots/ 或最终 ZIP 取得原图。视频从 GitHub 文件下载后上传 CSDN 视频入口，再替换第 5 节“待本人上传”的位置。不要将 GitHub MP4 文件下载地址冒充 CSDN 播放器地址。
+
+发布前只需本人核实身份、开发经历与 PSP 实际工时；正文不需要填写双人分工或贡献比例。博客尚未公开发布，不应提前填写公开博客 URL。

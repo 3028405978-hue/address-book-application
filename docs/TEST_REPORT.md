@@ -43,3 +43,9 @@ Playwright + Chromium，运行 Waitress HTTP 服务，独立演示数据库，�
 ## 本轮 CI 证据
 
 已核实 https://github.com/3028405978-hue/address-book-application/actions/runs/43884952886 的四个矩阵任务全部 success，每个任务的安装、pytest、compileall 步骤成功。原始 jobs 响应存入 [verified-initial-jobs.json](ci/verified-initial-jobs.json)，网页见截图 13-github-actions.png。PR 和最终 main 的新运行链接随后更新到 FINAL_DELIVERY.md。
+
+## PR 与正式发布后的验证
+
+真实 [PR #1](https://github.com/3028405978-hue/address-book-application/pull/1) 的 [四组检查](https://github.com/3028405978-hue/address-book-application/actions/runs/43888000056) 全成功。合并后的 [main 测试与 Release job](https://github.com/3028405978-hue/address-book-application/actions/runs/43888265296) 全成功；release job 使用 Linux / Python 3.12.16，再次运行 49 项测试及覆盖率（97%）、compileall、打包后独立解压重跑。下载公开附件后 CRC 与 FILE_MANIFEST.sha256 全部核对通过。最终构建的原始 pytest、JUnit、coverage XML 和编译日志在 ZIP 的 docs/release-evidence/，精确环境与 SHA 在 docs/FINAL_DELIVERY_RUNTIME.json。
+
+该段为本轮新运行证据，不将旧日志复制成新结果。原始 API 证据：[PR jobs](ci/verified-pr-1-jobs.json)、[发布 jobs](ci/verified-release-jobs.json)、[首次正式 Release 快照](ci/verified-release-snapshot.json)。
