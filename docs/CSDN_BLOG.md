@@ -152,6 +152,8 @@ python app.py
 
 已生成 [实际运行 MP4](video/demo.mp4)，内容为真实浏览器操作，没有生成式画面或虚构交互；为了便于阅读，录屏以 0.5 倍速导出。覆盖导入示例、新增、编辑、多联系方式、收藏、搜索、下载、重复导入和删除。服务在录屏前启动，视频未录入终端启动；完整本人讲解与启动录制步骤见 [DEMO_SCRIPT.md](DEMO_SCRIPT.md)。
 
+视频文件已在 GitHub 仓库公开保存：[下载实际 MP4](https://github.com/3028405978-hue/address-book-application/raw/refs/heads/main/docs/video/demo.mp4)。这是 GitHub 文件链接，不冒充 CSDN 视频播放器地址。
+
 CSDN 公开视频链接：**待本人上传后填写**。本地 MP4 不能直接当成已发布的视频链接。
 
 ## 6. 测试结果
@@ -176,23 +178,23 @@ python -m compileall .
 | 持久化 | 相同 SQLite 路径重建应用后读取 |
 | 基础防护 | CSRF、HTML 转义、长度和控制字符限制 |
 
-真实浏览器还通过了 12 项检查，页面 JavaScript 异常数为 0，390px 宽的首页和表单无横向溢出。原始日志与 JUnit XML 见 [TEST_REPORT.md](TEST_REPORT.md)。Windows 和 Python 3.11 的 CI 已配置，但本机没有执行这些环境，不能直接写成验证通过。
+真实浏览器还通过了 12 项检查，页面 JavaScript 异常数为 0，390px 宽的首页和表单无横向溢出。原始日志与 JUnit XML 见 [TEST_REPORT.md](TEST_REPORT.md)。本轮已另外核实 Ubuntu/Windows × Python 3.11/3.12 四组 Actions 全部成功；本机仍没有 Windows 11 桌面人工测试环境。
 
 ## 7. Git 提交与发布
 
-本地最终有 **6 次真实、有意义提交**，分别对应核心逻辑、页面与 Excel、测试与 CI、输入修复、文档证据和本地交付整理。具体 SHA 在交付包 git-history.txt；完整历史以 bundle 保留，可以还原检查。
+仓库已成功上传：https://github.com/3028405978-hue/address-book-application。我核实本轮开始时远程 main 有 **7 次真实提交**：一次仓库初始化和六个开发阶段迁移。原始本地开发历史有 6 次，不能把两套历史的 SHA 或数量混为一谈。本轮文档 PR 会继续增加远程提交；最终数量和发布 SHA 记录在 [FINAL_DELIVERY.md](FINAL_DELIVERY.md) 及 Release 附件 FINAL_DELIVERY_RUNTIME.json。
 
-![真实本地 Git 历史](screenshots/11-git-history.png)
+![真实 GitHub 提交历史网页](screenshots/12-github-history.png)
 
-这张截图是第 4 次提交时的真实本地 `git log` 检查点；第 6 次文档提交发生在截图之后，所以截图行数和最终总数不同。它不是 GitHub 网页截图。
+这张截图来自 GitHub commits/main 网页，记录本轮开始时的 7 次提交。旧的本地 git log 图仅是开发过程检查点，不作为 GitHub 网页证据。
 
-- 仓库：https://github.com/3028405978-hue/address-book-application
-- main 远程推送：**待 GitHub 认证完成**。已尝试推送，当前认证失败，不能称为上传成功。
-- v1.0.0：本地标签和 [Release 说明](RELEASE_NOTES.md) 已准备；正式 GitHub Release **待完成**。
-- PR：**待认证后基于真实差异创建**，没有虚构链接或多人审核。
-- 云部署：**待云账号授权**；Render API 实际返回 401，暂无公网访问地址。
+![真实 GitHub Actions 成功页面](screenshots/13-github-actions.png)
 
-发布后应把本节状态替换成真实 URL，并补充 GitHub 网页提交历史截图。如何恢复历史和继续发布见 [GIT_STATUS.md](GIT_STATUS.md)。
+已核实的 [GitHub Actions](https://github.com/3028405978-hue/address-book-application/actions/runs/43884952886) 在 Ubuntu/Windows、Python 3.11/3.12 四组环境中全部成功。Windows runner 是 hosted 环境，不等同 Windows 11 桌面人工测试。
+
+正式 Release 目标为 [v1.0.0](https://github.com/3028405978-hue/address-book-application/releases/tag/v1.0.0)，真实 PR 从 docs/final-submission 到 main，实际状态与精确链接在最终交付索引统一更新；在 API 确认发布前不把目标地址当成已成功发布。
+
+老师未提供可 Fork 的原始仓库，因此没有 Fork。项目为个人独立项目，不编造双人分工和多人审核。云部署仍为可选 PENDING，没有公网地址。
 
 ## 8. 开发过程和问题
 
@@ -204,9 +206,9 @@ python -m compileall .
 2. **演示搜索条件不够唯一。** `study@example.com` 也会匹配 `lin.study@example.com`，应用的子串查询是正确的。修改演示联系人邮箱为 `su.study@example.com` 后，浏览器断言按预期通过。
 3. **多值分隔容易丢信息。** 单纯用分号会与地址或社交内容冲突，因此系统导出统一采用 JSON 数组，手工导入才兼容分号。
 4. **特殊字符可能导致导出失败。** 控制字符不属于合法 Excel 文本，统一校验阶段就拒绝，并写入回归测试。
-5. **外部认证不能靠本地代码解决。** GitHub 的现有令牌失效，Render 未授权，因此如实保留 PENDING，避免把本地运行结果写成公开发布结果。
+5. **外部认证不能靠本地代码解决。** 早期 CLI 令牌失效，后来通过 ChatGPT GitHub 连接完成真实上传；Render 仍未授权，保留可选部署 PENDING。
 
-XP 实践主要体现在简单结构、小步提交、回归测试和集中校验的重构。测试主要是在功能实现后补充，这次不能自称严格的 TDD；也没有结对编程。CI 已配置，远程运行证据还需要实际推送后获取。
+XP 实践主要体现在简单结构、小步提交、回归测试和集中校验的重构。测试主要是在功能实现后补充，这次不能自称严格的 TDD；也没有结对编程。CI 四组运行已成功，远程证据已保存。
 
 ## 9. PSP 表
 
@@ -229,4 +231,4 @@ XP 实践主要体现在简单结构、小步提交、回归测试和集中校�
 
 简单结构让我更容易追踪一个操作：页面提交给路由，统一校验后更新模型，最后写入 SQLite。测试把这些约定固定下来，也让我能区分程序缺陷、测试夹具问题和演示数据问题。
 
-接下来我希望补充分页、用户认证和更清晰的数据备份流程。提交作业前，我还需要完成 GitHub 和云端授权后的发布、核实 PSP、上传图片视频并发布 CSDN 博客。基础软件已经有实际测试证据，外部提交环节仍要以真实结果为准。
+接下来我希望补充分页、用户认证和更清晰的数据备份流程。提交作业前，我还需要核实最终 GitHub Release 状态、核实 PSP、上传图片视频并发布 CSDN 博客。基础软件已经有实际测试证据，外部提交环节仍要以真实结果为准。

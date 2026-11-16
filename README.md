@@ -63,7 +63,7 @@ python -m compileall .
 
 可选覆盖率：`python -m pytest --cov=app --cov=models --cov=routes --cov=services`。
 
-已在 Linux / Python 3.12.14 实测：49 passed，0 failed；后端语句覆盖率 97%。浏览器 12 项检查通过。Windows/Python 3.11 的 CI 配置已提供，远程 CI 是否执行须查看 GitHub，不能据此视作 Windows 实测。证据见 [测试报告](docs/TEST_REPORT.md)。
+已在 Linux / Python 3.12.14 实测：49 passed，0 failed；后端语句覆盖率 97%。浏览器 12 项检查通过。GitHub hosted Windows/Ubuntu、Python 3.11/3.12 四组 CI 已实际成功，运行链接见 docs/FINAL_DELIVERY.md；不冒充 Windows 11 桌面人工测试。证据见 [测试报告](docs/TEST_REPORT.md)。
 
 ## 目录
 
@@ -79,7 +79,7 @@ docs/                           报告、博客、截图、演示视频
 render.yaml                     持久化 Render 部署配置
 ```
 
-代码规范：[CODE_STANDARD.md](CODE_STANDARD.md)。提交情况、Release、PR 及部署证据以 [FINAL_ACCEPTANCE.md](docs/FINAL_ACCEPTANCE.md) 为准。
+代码规范：[CODE_STANDARD.md](CODE_STANDARD.md)。远程 main 已成功上传；最新提交数、Release、PR 及部署证据以 [FINAL_ACCEPTANCE.md](docs/FINAL_ACCEPTANCE.md) 为准。
 
 ## 配置与部署
 
@@ -97,4 +97,4 @@ render.yaml                     持久化 Render 部署配置
 
 作者身份信息、PSP 实际工时、CSDN 发布地址需要本人核实填写。项目由自动化开发助手执行实现与验证；博客为第一人称发布草稿，不能代替本人真实开发经历。
 
-GitHub 文件整理范围见 [UPLOAD_GUIDE.md](docs/UPLOAD_GUIDE.md)。按本轮要求，远程授权和发布延后，本地项目可独立使用。
+GitHub 文件整理范围见 [UPLOAD_GUIDE.md](docs/UPLOAD_GUIDE.md)。GitHub 写入权限已确认，正在通过真实文档 PR 和 Actions 完成发布；未完成的 CSDN 与可选云部署另行保留状态。

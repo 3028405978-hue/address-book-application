@@ -9,3 +9,5 @@ instance/
 address-book-history.bundle
 git-history.txt
 FILE_MANIFEST.sha256
+dist/
+test-results.xml
