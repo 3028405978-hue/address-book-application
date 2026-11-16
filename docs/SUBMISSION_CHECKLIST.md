@@ -10,9 +10,9 @@
 - [x] 真实 GitHub 提交历史及 Actions 网页截图，不冒充本地截图
 - [x] 14 张证据图、可播放 MP4、完整演示脚本
 - [x] README、代码规范、XP、博客、PSP、测试、部署、Release 和验收文档
-- [ ] 正式 v1.0.0 Release 与最终 ZIP 附件：本轮实际发布后勾选
-- [ ] 真实 PR 与合并状态：本轮创建并核实后勾选
-- [ ] EE308_Address_Book_Submission_Final.zip 独立解压与测试：实际完成后勾选
+- [x] 正式 v1.0.0 Release 与最终 ZIP 附件已真实发布
+- [x] 真实 PR #1 已创建、四组检查成功后合并
+- [x] EE308_Address_Book_Submission_Final.zip 独立解压与测试通过，下载附件再次校验通过
 - [ ] 本人核实 PSP 实际工时、身份与第一人称经历
 - [ ] 本人上传图片/视频到 CSDN、替换公开 URL、发布博客并提交课程
 - [ ] 可选公开持久化云部署（+15）：未授权，不影响基础交付

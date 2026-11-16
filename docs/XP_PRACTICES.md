@@ -17,3 +17,5 @@
 本地 commit 的作者 `EE308 Project` 是工具使用的通用署名，不冒充学生真实姓名。正式提交前应由本人核实作者身份和课程诚信要求。
 
 本轮收尾已真实核实 GitHub main 与 CI：https://github.com/3028405978-hue/address-book-application/actions/runs/43884952886。docs/final-submission 只修改文档、证据与打包发布流程，不重写应用。
+
+真实文档 PR：[PR #1](https://github.com/3028405978-hue/address-book-application/pull/1)，在 Ubuntu/Windows × Python 3.11/3.12 四组检查成功后合并，随后 main 流水线生成正式 Release 附件。没有虚构第二人审核；本轮收尾只做文档、发布流程和证据更新。

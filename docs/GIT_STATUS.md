@@ -13,12 +13,12 @@
 
 ![GitHub 提交历史](screenshots/12-github-history.png)
 
-截图来自 https://github.com/3028405978-hue/address-book-application/commits/main/ ，捕获本次收尾起点的 7 次提交。后续文档提交会增加数量，截图是有明确时点的真实网页记录，不冒充最终静态总数。
+截图来自 https://github.com/3028405978-hue/address-book-application/commits/main/ ，现已补拍 PR #1 合并后的 9 次提交检查点。后续文档提交会增加数量，截图是有明确时点的真实网页记录，不冒充最终静态总数。
 
 旧 `11-git-history.png` 是原始本地第 4 次提交检查点，只作历史记录，不冒充 GitHub 页面。
 
 ## 发布和 PR
 
-已验证的 CI：https://github.com/3028405978-hue/address-book-application/actions/runs/43884952886，四个 OS/Python 组合成功。真实 PR 和 Release 在完成后更新 [FINAL_DELIVERY.md](FINAL_DELIVERY.md)。当前尚未完成的事项不可因有说明文件而视为发布成功。
+已验证的 CI：https://github.com/3028405978-hue/address-book-application/actions/runs/43884952886，四个 OS/Python 组合成功。真实 [PR #1](https://github.com/3028405978-hue/address-book-application/pull/1) 已合并；[v1.0.0 Release](https://github.com/3028405978-hue/address-book-application/releases/tag/v1.0.0) 和最终 ZIP 附件已公开，且下载文件的 CRC/清单校验通过。发布流水线成功记录为 https://github.com/3028405978-hue/address-book-application/actions/runs/43888265296。后续证据补充提交仍应与原始本地 6 次历史区分，最终精确提交信息见发布附件。
 
 老师未提供原始仓库，使用用户指定的独立仓库，没有 Fork 关系，没有多人审核或协作记录。
