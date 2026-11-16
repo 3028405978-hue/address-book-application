@@ -11,7 +11,7 @@ python -m pytest -v --cov=app --cov=models --cov=routes --cov=services --cov-rep
 python -m compileall .
 ```
 
-49 collected，49 passed，0 failed，耗时 2.80 秒。后端 290 条语句，未覆盖 8 条，总覆盖率 97%。compileall 退出码 0。
+49 collected，49 passed，0 failed，最新重跑耗时 3.23 秒。后端 290 条语句，未覆盖 8 条，总覆盖率 97%。compileall 退出码 0。
 
 | 模块 | 覆盖率 |
 |---|---:|

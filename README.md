@@ -96,3 +96,5 @@ render.yaml                     持久化 Render 部署配置
 - [提交清单](docs/SUBMISSION_CHECKLIST.md)
 
 作者身份信息、PSP 实际工时、CSDN 发布地址需要本人核实填写。项目由自动化开发助手执行实现与验证；博客为第一人称发布草稿，不能代替本人真实开发经历。
+
+GitHub 文件整理范围见 [UPLOAD_GUIDE.md](docs/UPLOAD_GUIDE.md)。按本轮要求，远程授权和发布延后，本地项目可独立使用。

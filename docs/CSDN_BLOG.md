@@ -180,11 +180,11 @@ python -m compileall .
 
 ## 7. Git 提交与发布
 
-本地最终有 **5 次真实、有意义提交**，分别对应核心逻辑、页面与 Excel、测试与 CI、输入修复和文档证据。具体 SHA 在交付包 git-history.txt；完整历史以 bundle 保留，可以还原检查。
+本地最终有 **6 次真实、有意义提交**，分别对应核心逻辑、页面与 Excel、测试与 CI、输入修复、文档证据和本地交付整理。具体 SHA 在交付包 git-history.txt；完整历史以 bundle 保留，可以还原检查。
 
 ![真实本地 Git 历史](screenshots/11-git-history.png)
 
-这张截图是第 4 次提交时的真实本地 `git log` 检查点；第 5 次文档提交发生在截图之后，所以截图行数和最终总数不同。它不是 GitHub 网页截图。
+这张截图是第 4 次提交时的真实本地 `git log` 检查点；第 6 次文档提交发生在截图之后，所以截图行数和最终总数不同。它不是 GitHub 网页截图。
 
 - 仓库：https://github.com/3028405978-hue/address-book-application
 - main 远程推送：**待 GitHub 认证完成**。已尝试推送，当前认证失败，不能称为上传成功。

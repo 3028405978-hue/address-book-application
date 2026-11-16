@@ -21,3 +21,5 @@ Python 3.11+：`python -m pip install -r requirements.txt`，`python app.py`，�
 ## 已知范围
 
 单用户本地应用；无用户登录、分页或多实例部署。正式 GitHub 上传、PR、Release 和公网部署分别验收，不能用本地测试替代。
+
+本轮交付范围更新：用户明确暂不处理 GitHub CLI 授权；本轮仅完成本地开发、测试、文档及打包。GitHub 上传、PR 和正式 Release 延后，不阻塞本地交付。
