@@ -8,7 +8,7 @@ PENDING：未取得 Render 账号权限，环境未配置 RENDER_API_KEY、RAILW
 
 根目录 render.yaml 是准备好的 Blueprint。它使用 starter 付费实例和 1 GB 持久磁盘，免费临时文件系统不能保证 SQLite 重启持久化。请在 Render 页面确认当时价格。
 
-1. 完成 GitHub 上传，登录 Render 并授权读取指定仓库。
+1. GitHub 上传已完成；若要启用额外部署，再登录 Render 并授权读取指定仓库。
 2. 选择 New → Blueprint，选择 address-book-application 仓库，检查配置与费用后创建。
 3. 构建命令：`pip install -r requirements.txt`。
 4. 启动命令：`waitress-serve --host=0.0.0.0 --port=$PORT --call app:create_app`。

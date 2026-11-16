@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.12.14, pytest-9.0.2, pluggy-1.7.0 -- /workspace/work/venv/bin/python
 cachedir: .pytest_cache
-rootdir: /workspace/output/address-book-application
+rootdir: /workspace/work/github-published-verification
 configfile: pytest.ini
 testpaths: tests
 plugins: cov-7.0.0
@@ -57,7 +57,7 @@ tests/test_favorites.py::test_filter PASSED                              [ 95%]
 tests/test_favorites.py::test_combined_filter PASSED                     [ 97%]
 tests/test_favorites.py::test_missing_favorite PASSED                    [100%]
 
-- generated xml file: /workspace/output/address-book-application/docs/test-results.xml -
+- generated xml file: /workspace/work/github-published-verification/docs/test-results.xml -
 ================================ tests coverage ================================
 _______________ coverage: platform linux, python 3.12.14-final-0 _______________
 
@@ -71,4 +71,4 @@ services/contact_methods.py      31      0   100%
 services/excel_service.py       108      5    95%   58, 76, 80, 97, 121
 -----------------------------------------------------------
 TOTAL                           290      8    97%
-============================== 49 passed in 3.23s ==============================
+============================== 49 passed in 3.07s ==============================

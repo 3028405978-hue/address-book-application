@@ -1,9 +1,12 @@
 name: Python tests
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   tests:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
         python: ['3.11', '3.12']
@@ -13,5 +16,36 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python -m pip install -r requirements.txt
-      - run: python -m pytest -v
-      - run: python -m compileall -q app.py config.py models.py routes services tests
+      - run: python -m pytest -v --cov=app --cov=models --cov=routes --cov=services --junitxml=test-results.xml
+      - run: python -m compileall -q app.py config.py models.py routes services tests scripts
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tests-${{ matrix.os }}-${{ matrix.python }}
+          path: test-results.xml
+  release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ee308-v1-release
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - name: Verify final source, package independently, and publish release
+        run: python scripts/final_release.py --publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verified-final-submission
+          path: dist/
