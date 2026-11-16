@@ -6,3 +6,6 @@ __pycache__/
 instance/
 .env
 *.log
+address-book-history.bundle
+git-history.txt
+FILE_MANIFEST.sha256

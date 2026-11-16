@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ee308-address-book
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: waitress-serve --host=0.0.0.0 --port=$PORT --call app:create_app
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:////var/data/contacts.db
+    disk:
+      name: contacts-data
+      mountPath: /var/data
+      sizeGB: 1

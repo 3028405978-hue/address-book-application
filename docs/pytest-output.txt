@@ -1,0 +1,74 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.0.2, pluggy-1.7.0 -- /workspace/work/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/output/address-book-application
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.0.0
+collecting ... collected 49 items
+
+tests/test_contacts.py::test_create PASSED                               [  2%]
+tests/test_contacts.py::test_invalid_name[] PASSED                       [  4%]
+tests/test_contacts.py::test_invalid_name[   ] PASSED                    [  6%]
+tests/test_contacts.py::test_invalid_name[AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA] PASSED [  8%]
+tests/test_contacts.py::test_detail PASSED                               [ 10%]
+tests/test_contacts.py::test_edit PASSED                                 [ 12%]
+tests/test_contacts.py::test_delete PASSED                               [ 14%]
+tests/test_contacts.py::test_search[\u5f20\u4e09] PASSED                 [ 16%]
+tests/test_contacts.py::test_search[13912345678] PASSED                  [ 18%]
+tests/test_contacts.py::test_search[secondary@example.com] PASSED        [ 20%]
+tests/test_contacts.py::test_search_literal_wildcards[%] PASSED          [ 22%]
+tests/test_contacts.py::test_search_literal_wildcards[_] PASSED          [ 24%]
+tests/test_contacts.py::test_search_literal_wildcards[\\] PASSED         [ 26%]
+tests/test_contacts.py::test_multiple_methods PASSED                     [ 28%]
+tests/test_contacts.py::test_sqlite_persistence PASSED                   [ 30%]
+tests/test_contacts.py::test_empty_page PASSED                           [ 32%]
+tests/test_contacts.py::test_csrf_rejected PASSED                        [ 34%]
+tests/test_contacts.py::test_html_escaped PASSED                         [ 36%]
+tests/test_contacts.py::test_invalid_email PASSED                        [ 38%]
+tests/test_contacts.py::test_invalid_edit_preserves_data PASSED          [ 40%]
+tests/test_contacts.py::test_normalize_blank_duplicates PASSED           [ 42%]
+tests/test_contacts.py::test_oversize_upload PASSED                      [ 44%]
+tests/test_contacts.py::test_missing[/contacts/999] PASSED               [ 46%]
+tests/test_contacts.py::test_missing[/contacts/999/edit] PASSED          [ 48%]
+tests/test_contacts.py::test_reject_unexportable_or_oversized_fields[data0] PASSED [ 51%]
+tests/test_contacts.py::test_reject_unexportable_or_oversized_fields[data1] PASSED [ 53%]
+tests/test_contacts.py::test_reject_unexportable_or_oversized_fields[data2] PASSED [ 55%]
+tests/test_contacts.py::test_reject_unexportable_or_oversized_fields[data3] PASSED [ 57%]
+tests/test_contacts.py::test_reject_unexportable_or_oversized_fields[data4] PASSED [ 59%]
+tests/test_contacts.py::test_reject_unexportable_or_oversized_fields[data5] PASSED [ 61%]
+tests/test_excel.py::test_export PASSED                                  [ 63%]
+tests/test_excel.py::test_chinese_headers_partial_import PASSED          [ 65%]
+tests/test_excel.py::test_lossless_roundtrip PASSED                      [ 67%]
+tests/test_excel.py::test_exact_duplicates_skip_same_name_new_record PASSED [ 69%]
+tests/test_excel.py::test_invalid_file[bad-bad.xlsx] PASSED              [ 71%]
+tests/test_excel.py::test_invalid_file[-empty.xlsx] PASSED               [ 73%]
+tests/test_excel.py::test_invalid_file[text-file.csv] PASSED             [ 75%]
+tests/test_excel.py::test_invalid_headers[rows0] PASSED                  [ 77%]
+tests/test_excel.py::test_invalid_headers[rows1] PASSED                  [ 79%]
+tests/test_excel.py::test_invalid_headers[rows2] PASSED                  [ 81%]
+tests/test_excel.py::test_header_only PASSED                             [ 83%]
+tests/test_excel.py::test_reject_formula_and_bad_values PASSED           [ 85%]
+tests/test_excel.py::test_no_upload PASSED                               [ 87%]
+tests/test_excel.py::test_blank_rows PASSED                              [ 89%]
+tests/test_excel.py::test_empty_export PASSED                            [ 91%]
+tests/test_favorites.py::test_toggle_preserves_methods PASSED            [ 93%]
+tests/test_favorites.py::test_filter PASSED                              [ 95%]
+tests/test_favorites.py::test_combined_filter PASSED                     [ 97%]
+tests/test_favorites.py::test_missing_favorite PASSED                    [100%]
+
+- generated xml file: /workspace/output/address-book-application/docs/test-results.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.14-final-0 _______________
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+app.py                           41      2    95%   46-47
+models.py                        17      0   100%
+routes/contacts.py               83      1    99%   64
+routes/favorites.py              10      0   100%
+services/contact_methods.py      31      0   100%
+services/excel_service.py       108      5    95%   58, 76, 80, 97, 121
+-----------------------------------------------------------
+TOTAL                           290      8    97%
+============================== 49 passed in 2.80s ==============================

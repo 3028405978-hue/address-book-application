@@ -1,0 +1,8 @@
+b0cd7b3 | 2026-11-16T16:46:20+08:00 | EE308 Project
+    fix: reject unexportable input and improve portable interface icons
+c0f4bfb | 2026-11-16T16:44:59+08:00 | EE308 Project
+    test: cover isolated SQLite workflows and Excel round-trip with CI matrix
+d3127f1 | 2026-11-16T16:43:42+08:00 | EE308 Project
+    feat: add Chinese responsive UI and lossless Excel import/export
+b24875c | 2026-11-16T16:39:30+08:00 | EE308 Project
+    feat: implement SQLite contacts, multiple methods, search and favorites
