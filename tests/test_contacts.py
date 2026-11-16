@@ -89,3 +89,16 @@ def test_oversize_upload(app, post):
 @pytest.mark.parametrize("url", ["/contacts/999", "/contacts/999/edit"])
 def test_missing(client, url):
     assert client.get(url).status_code == 404
+
+
+@pytest.mark.parametrize("data", [
+    {"name": "控制字符\x00"},
+    {"name": "非法 XML\uffff"},
+    {"name": "测试", "phones": [str(i) + "x" * 990 for i in range(50)]},
+    {"name": "测试", "notes": "x" * 10001},
+    {"name": "测试", "phones": ["x" * 1001]},
+    {"name": "测试", "phones": [str(i) for i in range(51)]},
+])
+def test_reject_unexportable_or_oversized_fields(post, data):
+    assert post("/contacts/new", data).status_code == 400
+    assert db.session.scalar(db.select(db.func.count(Contact.id))) == 0
